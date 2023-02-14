@@ -2,7 +2,7 @@
   <div class="container">
     <AdminHeader @toggleSidebar="toggle"/>
     <div class="content">
-      <AdminNavbar :openSidebar="openSidebar"/>
+      <AdminNavbar v-if="$route.name !== 'index'" :openSidebar="openSidebar"/>
       <slot/>
     </div>
 
